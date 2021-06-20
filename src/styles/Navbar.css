@@ -1,0 +1,59 @@
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 14px 20px;
+  overflow: hidden;
+  font: normal 1rem "Helvetica Neue", sans-serif;
+  color: #f1f1f1;
+  background-color: #313131;
+}
+
+nav a {
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.burger-container {
+  display: none;
+}
+
+.logo-container {
+  display: flex;
+  padding: 14px 16px;
+}
+
+.logo-container a {
+  padding: 0;
+}
+
+.logo-container a:nth-child(1) {
+  padding-right: 4px;
+}
+
+.buttons-container {
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  nav .burger {
+    display: block;
+  }
+
+  .burger-container {
+    display: flex;
+    flex: 0.5;
+  }
+
+  .logo-container {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+  }
+
+  .buttons-container {
+    flex: 0.5;
+  }
+}
