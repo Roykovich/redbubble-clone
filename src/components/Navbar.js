@@ -12,19 +12,27 @@ const Navbar = () => {
         </a>
       </div>
       <div className="logo-container">
-        <a>ø</a>
         <a>Redbubble</a>
+      </div>
+      <div className="search-bar">
+        <input type="text" name="search" id="search" placeholder="Search" />
       </div>
       <div className="buttons-container">
         <a>
           <i className="fa fa-shopping-cart"></i>
         </a>
         <a>
-          <i className="fas fa-heart"></i>
+          <i class="fa fa-heart"></i>
         </a>
       </div>
     </nav>
   );
 };
+
+/**
+ * TODO
+ *
+ * ? Revisar el navbard de redbubble para ver la propiedad order de la flex box
+ */
 
 export default Navbar;
