@@ -1,30 +1,50 @@
+import { useState } from "react";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
+  const [focusSearchBar, setFocusSearchBar] = useState(false);
+
+  const itsFocused = () => {
+    setFocusSearchBar(!focusSearchBar);
+  };
+
   return (
     <nav>
       <div className="burger-container">
-        <a className="burger">
+        <a href="#" className="burger">
           <i className="fa fa-bars"></i>
         </a>
-        <a className="search-icon">
+        <a href="#" className="search-icon">
           <i className="fa fa-search"></i>
         </a>
       </div>
       <div className="logo-container">
-        <a>Redbubble</a>
+        <a href="#" tabIndex="-1">
+          Redbubble
+        </a>
       </div>
-      <div className="search-bar">
-        <input type="text" name="search" id="search" placeholder="Search" />
-        <div>
-          <i class="fa fa-search"></i>
-        </div>
+      <div className={`search-bar ${focusSearchBar ? "search-bar-focus" : ""}`}>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search"
+          autoComplete={"off"}
+          onFocus={itsFocused}
+          onBlur={itsFocused}
+        />
+        <i class="fa fa-search"></i>
+      </div>
+      <div className="navigation-container">
+        <a href="#">Sell your art</a>
+        <a href="#">Login</a>
+        <a href="#">Signup</a>
       </div>
       <div className="buttons-container">
-        <a>
+        <a href="#">
           <i className="fa fa-shopping-cart"></i>
         </a>
-        <a>
+        <a href="#">
           <i class="fa fa-heart"></i>
         </a>
       </div>
