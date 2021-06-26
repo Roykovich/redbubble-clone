@@ -10,10 +10,13 @@ nav {
   background-color: #313131;
 }
 
-nav a {
+nav a,
+nav a:visited {
   display: block;
   padding: 14px 16px;
+  color: #f1f1f1;
   text-align: center;
+  text-decoration: none;
 }
 
 .burger-container {
@@ -26,33 +29,80 @@ nav a {
 }
 
 .search-bar {
-  outline: 1px red solid;
   display: flex;
+  flex: 5;
+  box-sizing: border-box;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-}
-
-.search-bar * {
-  outline: 1px blue solid;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
   color: #313131;
   background-color: #f1f1f1;
 }
 
 .search-bar input[type="text"] {
-  padding: 5px;
+  flex: 4;
+  padding-right: 20px;
   border: none;
-  box-sizing: border-box;
+  color: inherit;
+  background-color: #f1f1f1;
 }
 
-.search-bar div {
-  width: 60px;
+.search-bar input[type="text"]:focus {
+  outline: none;
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: inherit;
+}
+
+.search-bar-focus {
+  border: 3px solid #d5d5d5;
+  padding: 0 7px;
+}
+
+.navigation-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
 }
 
-@media screen and (max-width: 700px) {
+.navigation-container a {
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 0 5px;
+}
+
+.navigation-container a:nth-child(3) {
+  background-color: #d5d5d5;
+  color: #313131;
+}
+
+.navigation-container a:hover {
+  border-radius: 5px;
+  background-color: #d5d5d5;
+  color: #313131;
+}
+
+.navigation-container a:nth-child(3):hover {
+  box-sizing: border-box;
+  border: 2px solid #d5d5d5;
+  margin: -2px 3px;
+  background: none;
+  color: #d5d5d5;
+}
+
+.buttons-container {
+  display: flex;
+}
+
+.buttons-container a:hover {
+  border-radius: 50%;
+  background-color: #d5d5d5;
+  color: #313131;
+}
+
+@media screen and (max-width: 800px) {
   nav {
     padding-right: 20px;
   }
@@ -76,6 +126,10 @@ nav a {
   }
 
   .search-bar {
+    display: none;
+  }
+
+  .navigation-container {
     display: none;
   }
 }
