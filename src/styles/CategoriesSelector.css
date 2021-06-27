@@ -1,0 +1,101 @@
+.categories-selector {
+  display: flex;
+  max-width: 100%;
+  height: 40px;
+  border-bottom: 4px solid #d5d5d5;
+  color: #f1f1f1;
+  background: #313131;
+}
+
+.categories-navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.categories-navbar-list {
+  display: inline;
+  margin: auto 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.categories-dropdown {
+  display: none;
+  left: 0;
+  /* top: 40px; */
+  min-width: 160px;
+  border-radius: 5px;
+  background-color: #313131;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.categories-dropdown a {
+  display: block;
+  color: inherit;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.categories-dropdown a:hover {
+  border-radius: 5px;
+  background-color: #575757;
+}
+
+/* 
+  DROPDOWN HOVERS
+*/
+
+#Clothing:hover #clothingContent {
+  display: block;
+  position: absolute;
+}
+
+#Stickers:hover #stickersContent {
+  display: block;
+  position: absolute;
+}
+
+#Masks:hover #masksContent {
+  display: block;
+  position: absolute;
+}
+
+#PhoneCases:hover #phoneCasesContent {
+  display: block;
+  position: absolute;
+}
+
+#WallArt:hover #wallArtContent {
+  display: block;
+  position: absolute;
+}
+
+#HomeAndLiving:hover #homeAndLivingContent {
+  display: block;
+  position: absolute;
+}
+
+#KidsAndBabies:hover #kidsAndBabiesContent {
+  display: block;
+  position: absolute;
+}
+
+#Accessories:hover #accessoriesContent {
+  display: block;
+  position: absolute;
+}
+
+#Stationery:hover #stationaryContent {
+  display: block;
+  position: absolute;
+}
+
+#Gifts:hover #giftsContent {
+  display: block;
+  position: absolute;
+}
