@@ -46,6 +46,12 @@
   background-color: #575757;
 }
 
+@media screen and (max-width: 800px) {
+  .categories-selector {
+    display: none;
+  }
+}
+
 /* 
   DROPDOWN HOVERS
 */
