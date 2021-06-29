@@ -1,7 +1,11 @@
 import "../styles/ShopRange.css";
+
 import pillow from "../images/pillow_photo.jpg";
 import stickers from "../images/stickers.jpg";
 import tshirt from "../images/t-shirt.jpg";
+import poster from "../images/posters.jpg";
+import wall_art from "../images/wall_art.jpg";
+import clothing from "../images/clothing.jpg";
 
 const ProductRange = () => {
   return (
@@ -28,7 +32,7 @@ const ProductRange = () => {
           </div>
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={tshirt} alt="Shop Pillow" />
+              <img src={tshirt} alt="Shop T-shirts" />
             </a>
             <div className="shop-button-container">
               <a href="#">Shop T-Shirts</a>
@@ -37,50 +41,75 @@ const ProductRange = () => {
           {/* 3rd row */}
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={stickers} alt="Shop Pillow" />
+              <img src={poster} alt="Shop Posters" />
               <div className="shop-button-container">
-                <a href="#">Shop Stickers</a>
+                <a href="#">Shop Posters</a>
               </div>
             </a>
           </div>
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={pillow} alt="Shop Sticker" />
+              <img src={wall_art} alt="Shop Wall Art" />
               <div className="shop-button-container">
-                <a href="#">Shop Pillows</a>
+                <a href="#">Shop Wall Art</a>
               </div>
             </a>
           </div>
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={stickers} alt="Shop Pillow" />
+              <img src={clothing} alt="Shop Clothing" />
               <div className="shop-button-container">
-                <a href="#">Shop Stickers</a>
+                <a href="#">Shop Clothing</a>
               </div>
             </a>
           </div>
           {/* 4th row */}
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={pillow} alt="Shop Pillow" />
+              <img src={pillow} alt="Shop Phone Cases" />
               <div className="shop-button-container">
-                <a href="#">Shop Pillows</a>
+                <a href="#">Shop Phone Cases</a>
               </div>
             </a>
           </div>
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={stickers} alt="Shop Sticker" />
+              <img src={stickers} alt="Shop Home & Living" />
               <div className="shop-button-container">
-                <a href="#">Shop Stickers</a>
+                <a href="#">Shop Home & Living</a>
               </div>
             </a>
           </div>
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={pillow} alt="Shop Pillow" />
+              <img src={pillow} alt="Shop Masks" />
               <div className="shop-button-container">
-                <a href="#">Shop Pillows</a>
+                <a href="#">Shop Masks</a>
+              </div>
+            </a>
+          </div>
+          {/* 5th row */}
+          <div className="shop-range-item-container">
+            <a href="#">
+              <img src={stickers} alt="Shop Accessories" />
+              <div className="shop-button-container">
+                <a href="#">Shop Accessories</a>
+              </div>
+            </a>
+          </div>
+          <div className="shop-range-item-container">
+            <a href="#">
+              <img src={pillow} alt="Shop Stationery" />
+              <div className="shop-button-container">
+                <a href="#">Shop Stationery</a>
+              </div>
+            </a>
+          </div>
+          <div className="shop-range-item-container">
+            <a href="#">
+              <img src={stickers} alt="Shop Gifts" />
+              <div className="shop-button-container">
+                <a href="#">Shop Gifts</a>
               </div>
             </a>
           </div>
