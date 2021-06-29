@@ -6,6 +6,12 @@ import tshirt from "../images/t-shirt.jpg";
 import poster from "../images/posters.jpg";
 import wall_art from "../images/wall_art.jpg";
 import clothing from "../images/clothing.jpg";
+import phone_cases from "../images/phone_cases.jpg";
+import home_and_living from "../images/home_&_living.jpg";
+import masks from "../images/masks.jpg";
+import accessories from "../images/accessories.jpg";
+import stationery from "../images/stationery.jpg";
+import gifts from "../images/gifts.jpg";
 
 const ProductRange = () => {
   return (
@@ -66,7 +72,7 @@ const ProductRange = () => {
           {/* 4th row */}
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={pillow} alt="Shop Phone Cases" />
+              <img src={phone_cases} alt="Shop Phone Cases" />
               <div className="shop-button-container">
                 <a href="#">Shop Phone Cases</a>
               </div>
@@ -74,7 +80,7 @@ const ProductRange = () => {
           </div>
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={stickers} alt="Shop Home & Living" />
+              <img src={home_and_living} alt="Shop Home & Living" />
               <div className="shop-button-container">
                 <a href="#">Shop Home & Living</a>
               </div>
@@ -82,7 +88,7 @@ const ProductRange = () => {
           </div>
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={pillow} alt="Shop Masks" />
+              <img src={masks} alt="Shop Masks" />
               <div className="shop-button-container">
                 <a href="#">Shop Masks</a>
               </div>
@@ -91,7 +97,7 @@ const ProductRange = () => {
           {/* 5th row */}
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={stickers} alt="Shop Accessories" />
+              <img src={accessories} alt="Shop Accessories" />
               <div className="shop-button-container">
                 <a href="#">Shop Accessories</a>
               </div>
@@ -99,7 +105,7 @@ const ProductRange = () => {
           </div>
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={pillow} alt="Shop Stationery" />
+              <img src={stationery} alt="Shop Stationery" />
               <div className="shop-button-container">
                 <a href="#">Shop Stationery</a>
               </div>
@@ -107,7 +113,7 @@ const ProductRange = () => {
           </div>
           <div className="shop-range-item-container">
             <a href="#">
-              <img src={stickers} alt="Shop Gifts" />
+              <img src={gifts} alt="Shop Gifts" />
               <div className="shop-button-container">
                 <a href="#">Shop Gifts</a>
               </div>
