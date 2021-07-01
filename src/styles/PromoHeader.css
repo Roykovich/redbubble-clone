@@ -10,6 +10,7 @@
   align-items: center;
   box-sizing: border-box;
   height: 100%;
+  border-radius: 4px;
   background-image: url("../images/promo_background.jpg");
   background-size: cover;
   background-position: center;
