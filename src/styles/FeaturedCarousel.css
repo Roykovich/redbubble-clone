@@ -7,3 +7,44 @@
   outline: red 1px solid;
   height: 400px;
 }
+
+.featured-product-card {
+  outline: red 1px solid;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.featured-product-card div:nth-child(1) {
+  flex: 2;
+}
+
+.featured-product-card div:nth-child(1) > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.featured-product-card div:nth-child(2) {
+  flex: 0.8;
+  padding: 10px;
+}
+
+.featured-product-card div:nth-child(2) > h5,
+p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.featured-product-card div:nth-child(2) > h5 {
+  font-weight: 700;
+}
+.featured-product-card div:nth-child(2) > p {
+  font-weight: 400;
+}
+
+.featured-product-card div:nth-child(2) > h4 {
+  margin: 15px 0 0 0;
+}
