@@ -4,12 +4,26 @@
 }
 
 .featured-products-carousel {
-  outline: red 1px solid;
-  height: 400px;
+  /* outline: red 1px solid; */
+  display: flex;
+  height: 540px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.featured-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-width: 200px;
+  margin-right: 20px;
 }
 
 .featured-product-card {
-  outline: red 1px solid;
+  /* outline: red 1px solid; */
   display: flex;
   flex-direction: column;
   max-width: 200px;
@@ -47,4 +61,26 @@ p {
 
 .featured-product-card div:nth-child(2) > h4 {
   margin: 15px 0 0 0;
+}
+
+/* ! Borrar esto despues */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
