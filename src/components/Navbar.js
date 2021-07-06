@@ -11,15 +11,15 @@ const Navbar = () => {
   return (
     <nav>
       <div className="burger-container">
-        <a href="#" className="burger">
+        <a href="/" className="burger">
           <i className="fa fa-bars"></i>
         </a>
-        <a href="#" className="search-icon">
+        <a href="/" className="search-icon">
           <i className="fa fa-search"></i>
         </a>
       </div>
       <div className="logo-container">
-        <a href="#" tabIndex="-1">
+        <a href="/" tabIndex="-1">
           Redbubble
         </a>
       </div>
@@ -33,19 +33,19 @@ const Navbar = () => {
           onFocus={itsFocused}
           onBlur={itsFocused}
         />
-        <i class="fa fa-search"></i>
+        <i className="fa fa-search"></i>
       </div>
       <div className="navigation-container">
-        <a href="#">Sell your art</a>
-        <a href="#">Login</a>
-        <a href="#">Signup</a>
+        <a href="/">Sell your art</a>
+        <a href="/">Login</a>
+        <a href="/">Signup</a>
       </div>
       <div className="buttons-container">
-        <a href="#">
+        <a href="/">
           <i className="fa fa-shopping-cart"></i>
         </a>
-        <a href="#">
-          <i class="fa fa-heart"></i>
+        <a href="/">
+          <i className="fa fa-heart"></i>
         </a>
       </div>
     </nav>
