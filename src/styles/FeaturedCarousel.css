@@ -1,34 +1,42 @@
 .featured-products-container {
+  position: relative;
   color: #f1f1f1;
   padding: 0 7%;
 }
 
 .featured-products-carousel {
-  /* outline: red 1px solid; */
-  display: flex;
   height: 540px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
 
-.featured-column {
+.featured-products-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.featured-products-column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
-  min-width: 200px;
-  margin-right: 20px;
+  min-width: calc(((100% + 16px) / 5) - 16px);
+  width: calc(((100% + 16px) / 5) - 16px);
+  margin-right: 16px;
 }
 
 .featured-product-card {
   /* outline: red 1px solid; */
   display: flex;
   flex-direction: column;
-  max-width: 200px;
+  width: 100%;
   height: 250px;
   overflow: hidden;
+}
+
+.featured-product-card:nth-child(1) {
+  margin-bottom: 40px;
 }
 
 .featured-product-card div:nth-child(1) {
@@ -54,6 +62,9 @@ p {
 
 .featured-product-card div:nth-child(2) > h5 {
   font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .featured-product-card div:nth-child(2) > p {
   font-weight: 400;
@@ -63,24 +74,25 @@ p {
   margin: 15px 0 0 0;
 }
 
-/* ! Borrar esto despues */
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
+.featured-products-nav button {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: calc(-94px * -0.75);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: none;
+.featured-products-nav .prev {
+  left: calc(-94px * -0.75);
+  right: auto;
+  display: none;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.featured-products-nav .prev.show {
+  display: block;
 }
