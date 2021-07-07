@@ -25,8 +25,8 @@ I made this component with grid and was my first time using it. In this componen
 This component shows the current featured products on the webpage in a carousel. I have used the calc() function on the css of this component in order to make appear 5 columns with same widths.
 
 ```css
-min-width: calc(((100% + 16px) / 5) - 16px)
-width: calc(((100% + 16px) / 5) - 16px)
+min-width: calc(((100% + 16px) / 5) - 16px);
+width: calc(((100% + 16px) / 5) - 16px);
 ```
 
 ### **Featured Card**
