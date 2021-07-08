@@ -5,8 +5,16 @@ import { useState, useEffect, useRef } from "react";
 import product from "../images/products/black_pillow.jpg";
 
 const FeaturedCarousel = () => {
+  /**
+   * States
+   */
   const [featuredProducts, setFeaturedProducts] = useState([]);
-  // const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
+  const [carouselwWidth, setCarouselWidth] = useState(null);
+  const [slide, setSlide] = useState(0);
+  /**
+   * Refs
+   */
   const carouselContainer = useRef(null);
   const prevButton = useRef(null);
   const nextButton = useRef(null);
@@ -209,36 +217,47 @@ const FeaturedCarousel = () => {
       image: product,
       productName: "Incredible Black Pillow",
     },
+    {
+      alt: "Incredible Black Pillow",
+      artist: "Kimi Räikkönen",
+      cost: "24.58",
+      image: product,
+      productName: "Incredible Black Pillow",
+    },
+    {
+      alt: "Incredible Black Pillow",
+      artist: "Lando Norris",
+      cost: "24.58",
+      image: product,
+      productName: "Incredible Black Pillow",
+    },
   ];
+
+  const nextButtonClick = () => {
+    setIndex(
+      carouselTrack.current.offsetWidth - index * -carouselwWidth <
+        index * carouselwWidth
+        ? index
+        : index + 1
+    );
+
+    prevButton.current.classList.add("show");
+  };
+
+  const prevButtonClick = () => {
+    setIndex(index <= 0 ? 0 : index - 1);
+  };
+
+  useEffect(() => {
+    setSlide(index * -carouselwWidth);
+  }, [index, carouselwWidth]);
 
   useEffect(() => {
     setFeaturedProducts(DATA);
+    setCarouselWidth(carouselContainer.current.offsetWidth);
 
-    const carousel = carouselContainer.current;
-    const prev = prevButton.current;
-    const next = nextButton.current;
-    const track = carouselTrack.current;
-    let width = carousel.offsetWidth;
-    let index = 0;
     window.addEventListener("resize", () => {
-      width = carousel.offsetWidth;
-    });
-
-    next.addEventListener("click", (e) => {
-      e.preventDefault();
-      index = index + 1;
-      prev.classList.add("show");
-      if (track.offsetWidth - index * width > index * width) {
-        return;
-      }
-      track.style.transform = `translateX(${index * -width}px)`;
-    });
-
-    prev.addEventListener("click", () => {
-      index = index - 1;
-      if (index !== 0) {
-        track.style.transform = `translateX(${index * -width}px)`;
-      }
+      setCarouselWidth(carouselContainer.current.offsetWidth);
     });
   }, []);
 
@@ -246,7 +265,7 @@ const FeaturedCarousel = () => {
     let result = [];
     for (let i = 0; i < data.length; i += 2) {
       result.push(
-        <div className="featured-products-column">
+        <div className="featured-products-column" key={i}>
           <FeaturedCard
             alt={DATA[i].alt}
             artist={DATA[i].artist}
@@ -273,14 +292,26 @@ const FeaturedCarousel = () => {
       <div className="featured-products-container">
         <h1>Featured products</h1>
         <div ref={carouselContainer} className="featured-products-carousel">
-          <div ref={carouselTrack} className="featured-products-track">
+          <div
+            ref={carouselTrack}
+            style={{ transform: `translateX(${slide}px)` }}
+            className="featured-products-track"
+          >
             {createFeaturedProducts(featuredProducts)}
           </div>
           <div className="featured-products-nav">
-            <button ref={prevButton} className="prev">
+            <button
+              onClick={() => prevButtonClick()}
+              ref={prevButton}
+              className="prev"
+            >
               <i className="fa fa-chevron-left"></i>
             </button>
-            <button ref={nextButton} className="next">
+            <button
+              onClick={() => nextButtonClick()}
+              ref={nextButton}
+              className="next"
+            >
               <i className="fa fa-chevron-right"></i>
             </button>
           </div>
