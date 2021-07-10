@@ -1,0 +1,103 @@
+.designs-for-user-container {
+  color: #f1f1f1;
+  padding: 0 7%;
+}
+
+.designs-for-user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0.83em 0;
+}
+
+.designs-for-user-header h1 {
+  margin: 0;
+}
+
+.designs-for-user-header a {
+  text-decoration: none;
+  color: #ff596f;
+  font-weight: 500;
+}
+
+.designs-for-user-carousel {
+  height: 300px;
+  overflow-x: hidden;
+}
+
+.designs-for-user-track {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.designs-for-user-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  width: 200px;
+  margin-right: 16px;
+}
+
+.designs-for-user-card:nth-child(1) {
+  margin-bottom: 40px;
+}
+
+.designs-for-user-card div:nth-child(1) {
+  flex: 2;
+}
+
+.designs-for-user-card div:nth-child(1) > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.designs-for-user-card div:nth-child(2) {
+  flex: 0.8;
+  padding: 10px;
+}
+
+.designs-for-user-card div:nth-child(2) > h5,
+p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.designs-for-user-card div:nth-child(2) > h5 {
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.designs-for-user-card div:nth-child(2) > p {
+  font-weight: 400;
+}
+
+.designs-for-user-card div:nth-child(2) > h4 {
+  margin: 15px 0 0 0;
+}
+
+.designs-for-user-nav button {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: calc(-94px * -0.75);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.designs-for-user-nav .prev {
+  left: calc(-94px * -0.75);
+  right: auto;
+  display: none;
+}
+
+.designs-for-user-nav .prev.show {
+  display: block;
+}
