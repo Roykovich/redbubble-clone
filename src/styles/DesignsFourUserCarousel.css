@@ -34,6 +34,7 @@
 }
 
 .designs-for-user-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: calc(((100% + 16px) / 5) - 16px);
@@ -41,38 +42,38 @@
   margin-right: 16px;
 }
 
-.designs-for-user-card div:nth-child(1) {
+.designs-for-user-card div:nth-child(2) {
   flex: 2;
 }
 
-.designs-for-user-card div:nth-child(1) > img {
+.designs-for-user-card div:nth-child(2) > img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
 
-.designs-for-user-card div:nth-child(2) {
+.designs-for-user-card div:nth-child(3) {
   flex: 0.8;
   padding: 10px;
 }
 
-.designs-for-user-card div:nth-child(2) > h5,
+.designs-for-user-card div:nth-child(3) > h5,
 p {
   margin: 0;
   font-size: 14px;
 }
 
-.designs-for-user-card div:nth-child(2) > h5 {
+.designs-for-user-card div:nth-child(3) > h5 {
   font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.designs-for-user-card div:nth-child(2) > p {
+.designs-for-user-card div:nth-child(3) > p {
   font-weight: 400;
 }
 
-.designs-for-user-card div:nth-child(2) > h4 {
+.designs-for-user-card div:nth-child(3) > h4 {
   margin: 15px 0 0 0;
 }
 
@@ -97,4 +98,22 @@ p {
 
 .designs-for-user-nav .prev.show {
   display: block;
+}
+
+.designs-favorite-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  color: #ff596f;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  outline: none;
+  cursor: pointer;
+}
+
+.designs-favorite-button:hover {
+  background: #e1e1e1;
 }
