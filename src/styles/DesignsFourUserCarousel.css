@@ -1,4 +1,5 @@
 .designs-for-user-container {
+  position: relative;
   color: #f1f1f1;
   padding: 0 7%;
 }
@@ -21,8 +22,8 @@
 }
 
 .designs-for-user-carousel {
-  height: 300px;
-  overflow-x: hidden;
+  height: 320px;
+  overflow: hidden;
 }
 
 .designs-for-user-track {
@@ -35,13 +36,9 @@
 .designs-for-user-card {
   display: flex;
   flex-direction: column;
-  min-width: 200px;
-  width: 200px;
+  min-width: calc(((100% + 16px) / 5) - 16px);
+  width: calc(((100% + 16px) / 5) - 16px);
   margin-right: 16px;
-}
-
-.designs-for-user-card:nth-child(1) {
-  margin-bottom: 40px;
 }
 
 .designs-for-user-card div:nth-child(1) {
