@@ -8,14 +8,14 @@ const DesignForUserCard = ({
   productName,
 }) => {
   return (
-    <div className="design-for-user-card">
+    <div className="designs-for-user-card">
       <div>
         <img src={image} alt={alt} />
       </div>
       <div>
         <h5>{productName}</h5>
         <p>{artist}</p>
-        <h4>{amountProducts}</h4>
+        <h4>{amountProducts} products</h4>
       </div>
     </div>
   );
