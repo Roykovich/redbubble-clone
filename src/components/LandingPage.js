@@ -1,6 +1,7 @@
 import PromoHeader from "./PromoHeader";
 import ProductRange from "./ProductRange";
 import FeaturedCarousel from "./FeaturedCarousel";
+import DesignsForUserCarousel from "./DesignsForUserCarousel";
 import "../styles/LandingPage.css";
 
 const LandingPage = () => {
@@ -9,6 +10,7 @@ const LandingPage = () => {
       <PromoHeader />
       <ProductRange />
       <FeaturedCarousel />
+      <DesignsForUserCarousel />
     </div>
   );
 };
