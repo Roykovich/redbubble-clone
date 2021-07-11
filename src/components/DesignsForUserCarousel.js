@@ -1,6 +1,7 @@
-import "../styles/DesignsFourUserCarousel.css";
-import DesignForUserCard from "./DesignForUserCard";
 import { useState, useEffect, useRef } from "react";
+import ProductCard from "./ProductCard";
+
+import "../styles/DesignsFourUserCarousel.css";
 
 import product from "../images/products/evangelion_design.png";
 
@@ -132,12 +133,19 @@ const DesignsForUserCarousel = () => {
           >
             {designProducts.map((item) => {
               return (
-                <DesignForUserCard
+                <ProductCard
                   alt={item.alt}
                   artist={item.artist}
-                  amountProducts={item.amountProducts}
+                  favoriteButon={true}
                   image={item.image}
+                  productAmount={item.amountProducts}
                   productName={item.productName}
+                  style={{
+                    height: "100%",
+                    width: "calc(((100% + 16px) / 5) - 16px)",
+                    minWidth: "calc(((100% + 16px) / 5) - 16px)",
+                    marginRight: "16px",
+                  }}
                 />
               );
             })}

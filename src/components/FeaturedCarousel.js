@@ -1,6 +1,7 @@
-import "../styles/FeaturedCarousel.css";
-import FeaturedCard from "./FeaturedCard";
 import { useState, useEffect, useRef } from "react";
+import ProductCard from "./ProductCard";
+
+import "../styles/FeaturedCarousel.css";
 
 import product from "../images/products/black_pillow.jpg";
 
@@ -266,19 +267,30 @@ const FeaturedCarousel = () => {
     for (let i = 0; i < data.length; i += 2) {
       result.push(
         <div className="featured-products-column" key={i}>
-          <FeaturedCard
+          <ProductCard
             alt={DATA[i].alt}
             artist={DATA[i].artist}
             cost={DATA[i].cost}
             image={DATA[i].image}
             productName={DATA[i].productName}
+            style={{
+              height: "250px",
+              width: "100%",
+              marginRight: "16px",
+              marginBottom: "40px",
+            }}
           />
-          <FeaturedCard
+          <ProductCard
             alt={DATA[i + 1].alt}
             artist={DATA[i + 1].artist}
             cost={DATA[i + 1].cost}
             image={DATA[i + 1].image}
             productName={DATA[i + 1].productName}
+            style={{
+              height: "250px",
+              width: "100%",
+              marginRight: "16px",
+            }}
           />
         </div>
       );
