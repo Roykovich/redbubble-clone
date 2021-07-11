@@ -235,7 +235,7 @@ const FeaturedCarousel = () => {
 
   const nextButtonClick = () => {
     setIndex(
-      carouselTrack.current.offsetWidth - index * -carouselwWidth <
+      carouselTrack.current.offsetWidth - index * carouselwWidth <
         index * carouselwWidth
         ? index
         : index + 1
@@ -300,18 +300,10 @@ const FeaturedCarousel = () => {
             {createFeaturedProducts(featuredProducts)}
           </div>
           <div className="featured-products-nav">
-            <button
-              onClick={() => prevButtonClick()}
-              ref={prevButton}
-              className="prev"
-            >
+            <button onClick={prevButtonClick} ref={prevButton} className="prev">
               <i className="fa fa-chevron-left"></i>
             </button>
-            <button
-              onClick={() => nextButtonClick()}
-              ref={nextButton}
-              className="next"
-            >
+            <button onClick={nextButtonClick} ref={nextButton} className="next">
               <i className="fa fa-chevron-right"></i>
             </button>
           </div>
