@@ -12,7 +12,6 @@
 .featured-products-track {
   display: flex;
   flex-wrap: nowrap;
-  width: 100%;
   height: 100%;
   transition: transform 0.8s ease-in-out;
 }
@@ -27,7 +26,6 @@
 }
 
 .featured-product-card {
-  /* outline: red 1px solid; */
   display: flex;
   flex-direction: column;
   width: 100%;
