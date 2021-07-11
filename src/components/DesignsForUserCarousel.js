@@ -6,82 +6,115 @@ import product from "../images/products/evangelion_design.png";
 
 const DesignsForUserCarousel = () => {
   const [designProducts, setDesignProducts] = useState([]);
+  const [index, setIndex] = useState(0);
+  const [carouselwWidth, setCarouselWidth] = useState(null);
+  const [slide, setSlide] = useState(0);
+
+  const carouselContainer = useRef(null);
+  const prevButton = useRef(null);
+  const nextButton = useRef(null);
+  const carouselTrack = useRef(null);
 
   const DATA = [
     {
       alt: "Incredible Black Pillow",
       artist: "Charles Leclerc",
-      cost: "24.58",
+      amountProducts: "58",
       image: product,
       productName: "Incredible Black Pillow",
     },
     {
       alt: "Incredible Black Pillow",
       artist: "Antoine Harrison",
-      cost: "24.58",
+      amountProducts: "24",
       image: product,
       productName: "Incredible Black Pillow",
     },
     {
       alt: "Incredible Black Pillow",
       artist: "Ruuri Miyazaki",
-      cost: "24.58",
+      amountProducts: "37",
       image: product,
       productName: "Incredible Black Pillow",
     },
     {
       alt: "Incredible Black Pillow",
       artist: "Charles Leclerc",
-      cost: "24.58",
+      amountProducts: "14",
       image: product,
       productName: "Incredible Black Pillow",
     },
     {
       alt: "Incredible Black Pillow",
       artist: "Mick Schumacher",
-      cost: "24.58",
+      amountProducts: "29",
       image: product,
       productName: "Incredible Black Pillow",
     },
     {
       alt: "Incredible Black Pillow",
       artist: "Lex Freedman",
-      cost: "24.58",
+      amountProducts: "64",
       image: product,
       productName: "Incredible Black Pillow",
     },
     {
       alt: "Incredible Black Pillow",
       artist: "Antoine Harrison",
-      cost: "24.58",
+      amountProducts: "14",
       image: product,
       productName: "Incredible Black Pillow",
     },
     {
       alt: "Incredible Black Pillow",
       artist: "Ruuri Miyazaki",
-      cost: "24.58",
+      amountProducts: "29",
       image: product,
       productName: "Incredible Black Pillow",
     },
     {
       alt: "Incredible Black Pillow",
       artist: "Lex Freedman",
-      cost: "24.58",
+      amountProducts: "97",
       image: product,
       productName: "Incredible Black Pillow",
     },
     {
       alt: "Incredible Black Pillow",
       artist: "Ruuri Miyazaki",
-      cost: "24.58",
+      amountProducts: "47",
       image: product,
       productName: "Incredible Black Pillow",
     },
   ];
 
+  const nextButtonClick = () => {
+    setIndex(
+      carouselTrack.current.offsetWidth - index * carouselwWidth <
+        index * carouselwWidth
+        ? index
+        : index + 1
+    );
+
+    prevButton.current.classList.add("show");
+  };
+
+  const prevButtonClick = () => {
+    setIndex(index <= 0 ? 0 : index - 1);
+  };
+
+  useEffect(() => {
+    setSlide(index * -carouselwWidth);
+  }, [index, carouselwWidth]);
+
   useEffect(() => {
     setDesignProducts(DATA);
+
+    setCarouselWidth(carouselContainer.current.offsetWidth);
+
+    window.addEventListener("resize", () => {
+      setCarouselWidth(carouselContainer.current.offsetWidth);
+    });
   }, []);
 
   return (
@@ -91,14 +124,18 @@ const DesignsForUserCarousel = () => {
           <h1>Explore designs picked for you</h1>
           <a href="/">See more</a>
         </div>
-        <div className="designs-for-user-carousel">
-          <div className="designs-for-user-track">
+        <div ref={carouselContainer} className="designs-for-user-carousel">
+          <div
+            ref={carouselTrack}
+            style={{ transform: `translateX(${slide}px)` }}
+            className="designs-for-user-track"
+          >
             {designProducts.map((item) => {
               return (
                 <DesignForUserCard
                   alt={item.alt}
                   artist={item.artist}
-                  cost={item.cost}
+                  amountProducts={item.amountProducts}
                   image={item.image}
                   productName={item.productName}
                 />
@@ -106,18 +143,10 @@ const DesignsForUserCarousel = () => {
             })}
           </div>
           <div className="designs-for-user-nav">
-            <button
-              // onClick={}
-              // ref={}
-              className="prev"
-            >
+            <button onClick={prevButtonClick} ref={prevButton} className="prev">
               <i className="fa fa-chevron-left"></i>
             </button>
-            <button
-              // onClick={}
-              // ref={}
-              className="next"
-            >
+            <button onClick={nextButtonClick} ref={nextButton} className="next">
               <i className="fa fa-chevron-right"></i>
             </button>
           </div>
