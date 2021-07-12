@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import ProductCard from "./ProductCard";
 import Carousel from "./Carousel";
 
-import "../styles/DesignsFourUserCarousel.css";
+import "../styles/DesignsFourUserProducts.css";
 
 import product from "../images/products/evangelion_design.png";
 

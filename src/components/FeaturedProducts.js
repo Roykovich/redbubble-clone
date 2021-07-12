@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import Carousel from "./Carousel";
 
-import "../styles/FeaturedCarousel.css";
+import "../styles/FeaturedProducts.css";
 
 import product from "../images/products/black_pillow.jpg";
 
