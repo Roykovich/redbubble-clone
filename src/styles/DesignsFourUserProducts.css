@@ -1,0 +1,22 @@
+.designs-for-user-container {
+  position: relative;
+  color: #f1f1f1;
+  padding: 0 7%;
+}
+
+.designs-for-user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0.83em 0;
+}
+
+.designs-for-user-header h1 {
+  margin: 0;
+}
+
+.designs-for-user-header a {
+  text-decoration: none;
+  color: #ff596f;
+  font-weight: 500;
+}
