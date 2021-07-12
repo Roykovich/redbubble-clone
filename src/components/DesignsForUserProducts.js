@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import ProductCard from "./ProductCard";
+import Carousel from "./Carousel";
 
 import "../styles/DesignsFourUserCarousel.css";
 
@@ -7,14 +8,6 @@ import product from "../images/products/evangelion_design.png";
 
 const DesignsForUserCarousel = () => {
   const [designProducts, setDesignProducts] = useState([]);
-  const [index, setIndex] = useState(0);
-  const [carouselwWidth, setCarouselWidth] = useState(null);
-  const [slide, setSlide] = useState(0);
-
-  const carouselContainer = useRef(null);
-  const prevButton = useRef(null);
-  const nextButton = useRef(null);
-  const carouselTrack = useRef(null);
 
   const DATA = [
     {
@@ -89,33 +82,8 @@ const DesignsForUserCarousel = () => {
     },
   ];
 
-  const nextButtonClick = () => {
-    setIndex(
-      carouselTrack.current.offsetWidth - index * carouselwWidth <
-        index * carouselwWidth
-        ? index
-        : index + 1
-    );
-
-    prevButton.current.classList.add("show");
-  };
-
-  const prevButtonClick = () => {
-    setIndex(index <= 0 ? 0 : index - 1);
-  };
-
-  useEffect(() => {
-    setSlide(index * -carouselwWidth);
-  }, [index, carouselwWidth]);
-
   useEffect(() => {
     setDesignProducts(DATA);
-
-    setCarouselWidth(carouselContainer.current.offsetWidth);
-
-    window.addEventListener("resize", () => {
-      setCarouselWidth(carouselContainer.current.offsetWidth);
-    });
   }, []);
 
   return (
@@ -125,40 +93,26 @@ const DesignsForUserCarousel = () => {
           <h1>Explore designs picked for you</h1>
           <a href="/">See more</a>
         </div>
-        <div ref={carouselContainer} className="designs-for-user-carousel">
-          <div
-            ref={carouselTrack}
-            style={{ transform: `translateX(${slide}px)` }}
-            className="designs-for-user-track"
-          >
-            {designProducts.map((item) => {
-              return (
-                <ProductCard
-                  alt={item.alt}
-                  artist={item.artist}
-                  favoriteButon
-                  image={item.image}
-                  productAmount={item.amountProducts}
-                  productName={item.productName}
-                  style={{
-                    height: "100%",
-                    width: "calc(((100% + 16px) / 5) - 16px)",
-                    minWidth: "calc(((100% + 16px) / 5) - 16px)",
-                    marginRight: "16px",
-                  }}
-                />
-              );
-            })}
-          </div>
-          <div className="designs-for-user-nav">
-            <button onClick={prevButtonClick} ref={prevButton} className="prev">
-              <i className="fa fa-chevron-left"></i>
-            </button>
-            <button onClick={nextButtonClick} ref={nextButton} className="next">
-              <i className="fa fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
+        <Carousel height="320px">
+          {designProducts.map((item) => {
+            return (
+              <ProductCard
+                alt={item.alt}
+                artist={item.artist}
+                favoriteButon
+                image={item.image}
+                productAmount={item.amountProducts}
+                productName={item.productName}
+                style={{
+                  height: "100%",
+                  width: "calc(((100% + 16px) / 5) - 16px)",
+                  minWidth: "calc(((100% + 16px) / 5) - 16px)",
+                  marginRight: "16px",
+                }}
+              />
+            );
+          })}
+        </Carousel>
       </div>
     </section>
   );
