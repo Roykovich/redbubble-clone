@@ -136,7 +136,7 @@ const DesignsForUserCarousel = () => {
                 <ProductCard
                   alt={item.alt}
                   artist={item.artist}
-                  favoriteButon={true}
+                  favoriteButon
                   image={item.image}
                   productAmount={item.amountProducts}
                   productName={item.productName}
