@@ -1,4 +1,4 @@
-import "../styles/ShopRange.css";
+import "../styles/ProductRange.css";
 
 import pillow from "../images/pillow_photo.jpg";
 import stickers from "../images/stickers.jpg";
