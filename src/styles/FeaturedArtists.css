@@ -1,0 +1,46 @@
+.featured-artists-container {
+  position: relative;
+  color: #f1f1f1;
+  padding: 0 7%;
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 300px;
+  border-radius: 4px;
+}
+
+.artist-card div:nth-child(1) {
+  flex: 1.05;
+}
+
+.artist-card div:nth-child(1) > img {
+  height: 100%;
+  width: 100%;
+}
+
+.artist-card div:nth-child(2) {
+  flex: 0.95;
+}
+
+.artist-card div:nth-child(2) > div:nth-child(1) {
+  border-radius: 50%;
+}
+
+.artist-card div:nth-child(2) > div:nth-child(1) > img {
+  height: 100%;
+  width: 100%;
+}
+
+.artist-card div:nth-child(2) > a:nth-child(1) {
+  color: green;
+}
+
+.artist-card div:nth-child(2) > a:nth-child(2) {
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  background-color: red;
+}
