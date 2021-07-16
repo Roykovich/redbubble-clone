@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 import "../styles/Carousel.css";
 
-const Carousel = ({ children, height }) => {
+const Carousel = ({ children, height, columnGap }) => {
   // STATE
   const [index, setIndex] = useState(0);
   const [slide, setSlide] = useState(0);
@@ -33,10 +33,10 @@ const Carousel = ({ children, height }) => {
   }, [index, carouselWidth]);
 
   useEffect(() => {
-    setCarouselWidth(carousel.current.offsetWidth);
+    setCarouselWidth(carousel.current.offsetWidth + columnGap);
 
     window.addEventListener("resize", () => {
-      setCarouselWidth(carousel.current.offsetWidth);
+      setCarouselWidth(carousel.current.offsetWidth + columnGap);
     });
   }, []);
 
@@ -44,7 +44,10 @@ const Carousel = ({ children, height }) => {
     <div ref={carousel} style={{ height }} className="carousel">
       <div
         ref={track}
-        style={{ transform: `translateX(${slide}px)` }}
+        style={{
+          transform: `translateX(${slide}px)`,
+          columnGap: `${columnGap}px`,
+        }}
         className="carousel-track"
       >
         {children}
