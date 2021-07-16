@@ -9,6 +9,8 @@ import product from "../images/products/black_pillow.jpg";
 const FeaturedCarousel = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
+  const gap = 16;
+
   const DATA = [
     {
       alt: "Incredible Black Pillow",
@@ -230,7 +232,16 @@ const FeaturedCarousel = () => {
     let result = [];
     for (let i = 0; i < data.length; i += 2) {
       result.push(
-        <div className="featured-products-column" key={i}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
+            minWidth: `calc(((100% + ${gap}px) / 5) - ${gap}px)`,
+            width: `calc(((100% + ${gap}px) / 5) - ${gap}px)`,
+          }}
+          key={i}
+        >
           <ProductCard
             alt={DATA[i].alt}
             artist={DATA[i].artist}
@@ -240,7 +251,6 @@ const FeaturedCarousel = () => {
             style={{
               height: "250px",
               width: "100%",
-              marginRight: "16px",
               marginBottom: "40px",
             }}
           />
@@ -253,7 +263,6 @@ const FeaturedCarousel = () => {
             style={{
               height: "250px",
               width: "100%",
-              marginRight: "16px",
             }}
           />
         </div>
@@ -267,7 +276,7 @@ const FeaturedCarousel = () => {
     <section>
       <div className="featured-products-container">
         <h1>Featured products</h1>
-        <Carousel height="540px">
+        <Carousel height="540px" columnGap={gap}>
           {createFeaturedProducts(featuredProducts)}
         </Carousel>
       </div>
