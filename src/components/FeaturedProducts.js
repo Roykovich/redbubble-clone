@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import Carousel from "./Carousel";
 
-import "../styles/FeaturedProducts.css";
-
 import product from "../images/products/black_pillow.jpg";
 
 const FeaturedCarousel = () => {
@@ -274,7 +272,7 @@ const FeaturedCarousel = () => {
 
   return (
     <section>
-      <div className="featured-products-container">
+      <div className="landing-page-section-container">
         <h1>Featured products</h1>
         <Carousel height="540px" columnGap={gap}>
           {createFeaturedProducts(featuredProducts)}

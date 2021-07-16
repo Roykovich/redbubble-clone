@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import Carousel from "./Carousel";
 
-import "../styles/DesignsFourUserProducts.css";
-
 import product from "../images/products/evangelion_design.png";
 
 const DesignsForUserCarousel = () => {
@@ -90,7 +88,7 @@ const DesignsForUserCarousel = () => {
 
   return (
     <section>
-      <div className="designs-for-user-container">
+      <div className="landing-page-section-container">
         <div className="designs-for-user-header">
           <h1>Explore designs picked for you</h1>
           <a href="/">See more</a>

@@ -5,8 +5,6 @@ import ArtistCard from "./ArtistCard";
 import image from "../images/products/Kurisuvaporwave.jpg";
 import pfp from "../images/gifts.jpg";
 
-import "../styles/FeaturedArtists.css";
-
 const FeaturedArtists = () => {
   const [featuredArtists, setFeaturedArtists] = useState([]);
 
@@ -71,7 +69,7 @@ const FeaturedArtists = () => {
 
   return (
     <section>
-      <div className="featured-artists-container">
+      <div className="landing-page-section-container">
         <h1>Featured artists</h1>
         <Carousel height="420px" columnGap={gap}>
           {featuredArtists.map((artist) => {
