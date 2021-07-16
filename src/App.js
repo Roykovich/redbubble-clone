@@ -1,5 +1,3 @@
-import "./styles/App.css";
-
 import Navbar from "./components/Navbar";
 import CategoriesSelector from "./components/CategoriesSelector";
 import LandingPage from "./components/LandingPage";
