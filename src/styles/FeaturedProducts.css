@@ -3,12 +3,3 @@
   color: #f1f1f1;
   padding: 0 7%;
 }
-
-.featured-products-column {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-width: calc(((100% + 16px) / 5) - 16px);
-  width: calc(((100% + 16px) / 5) - 16px);
-  margin-right: 16px;
-}
