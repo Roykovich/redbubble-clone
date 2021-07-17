@@ -3,6 +3,7 @@ import ProductRange from "./ProductRange";
 import FeaturedProducts from "./FeaturedProducts";
 import DesignsForUserProducts from "./DesignsForUserProducts";
 import FeaturedArtists from "./FeaturedArtists";
+import ShopFanArt from "./ShopFanArt";
 
 import "../styles/LandingPage.css";
 
@@ -14,6 +15,7 @@ const LandingPage = () => {
       <FeaturedProducts />
       <DesignsForUserProducts />
       <FeaturedArtists />
+      <ShopFanArt />
     </div>
   );
 };
