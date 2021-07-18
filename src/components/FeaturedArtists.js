@@ -3,7 +3,6 @@ import Carousel from "./Carousel";
 import ArtistCard from "./ArtistCard";
 
 import image from "../images/products/Kurisuvaporwave.jpg";
-import pfp from "../images/gifts.jpg";
 
 const FeaturedArtists = () => {
   const [featuredArtists, setFeaturedArtists] = useState([]);
@@ -14,52 +13,52 @@ const FeaturedArtists = () => {
     {
       artistName: "Max Verstappen",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       artistName: "Lewis Hamilton",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       artistName: "Valterri Bottas",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       artistName: "Sebastian Vettel",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       artistName: "Kimi Räikkönen",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       artistName: "Piere Gasly",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       artistName: "Lando Norris",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       artistName: "Daniel Ricciardo",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       artistName: "Yuki Tsunoda",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
     {
       artistName: "George Russel",
       image,
-      pfp,
+      pfp: "https://randomuser.me/api/portraits/women/60.jpg",
     },
   ];
 
