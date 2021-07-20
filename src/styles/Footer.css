@@ -4,6 +4,13 @@ footer {
   width: 100%;
   color: #f1f1f1;
   overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+footer hr {
+  width: 100%;
+  margin: 0;
+  border: 1px solid #575757;
 }
 
 .footer-email {
@@ -66,12 +73,6 @@ footer {
   font-size: 1.2em;
 }
 
-footer .footer-email hr {
-  width: 100%;
-  margin: 0;
-  border: 1px solid #575757;
-}
-
 .footer-email-location-settings {
   flex: 1;
   display: flex;
@@ -122,6 +123,7 @@ footer .footer-email hr {
 .footer-info {
   display: flex;
   box-sizing: border-box;
+  margin: 0 7%;
   padding: 32px 24px;
   min-height: 400px;
   background-color: #1a1a1a;
@@ -147,4 +149,99 @@ footer .footer-email hr {
 
 .footer-info > div > a:hover {
   text-decoration: underline;
+}
+
+.footer-info > div > div {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  height: 25px;
+  margin-bottom: 11px;
+}
+
+.footer-info > div > div > a {
+  color: inherit;
+  font-weight: 400;
+  text-decoration: none;
+}
+.footer-info > div > div > a:hover {
+  text-decoration: underline;
+}
+
+.footer-info > div > div > a > i {
+  align-self: center;
+  margin-right: 15px;
+  width: 15px;
+}
+
+.footer-policies {
+  box-sizing: border-box;
+  margin: 0 7%;
+  padding: 10px 24px;
+  height: 150px;
+  background-color: #1a1a1a;
+}
+
+.footer-policies > div {
+  display: flex;
+  column-gap: 20px;
+}
+
+.footer-policies > h1 {
+  margin: 20px 0;
+}
+
+.footer-policies > div a {
+  color: #575757;
+  text-decoration: none;
+}
+
+.footer-policies > div a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 60px 0;
+  color: #575757;
+  font-size: 0.8em;
+}
+
+.footer-copyright ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-copyright li {
+  list-style-type: none;
+  width: 50px;
+}
+
+.footer-copyright li > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.footer-copyright .badge-container {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin: 50px 0;
+}
+
+.footer-copyright .badge-container a {
+  width: 100%;
+}
+
+.footer-copyright .badge-container > a > img {
+  width: 100%;
+  height: 100%;
 }

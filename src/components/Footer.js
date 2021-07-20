@@ -2,6 +2,9 @@ import { useState } from "react";
 
 import "../styles/Footer.css";
 
+import playStoreBadge from "../images/google-play-badge.png";
+import appStoreBadge from "../images/app-store-badge.png";
+
 const Footer = () => {
   const [currency, setCurrency] = useState("USD");
   const [language, setLanguage] = useState("English");
@@ -76,15 +79,92 @@ const Footer = () => {
         </div>
         <div>
           <h4>Social</h4>
-          <a href="/">Instagram</a>
-          <a href="/">Facebook</a>
-          <a href="/">Twitter</a>
-          <a href="/">Tumblr</a>
-          <a href="/">Pinterest</a>
+          <div>
+            <a href="/">
+              <i className="fa fa-instagram"></i>Instagram
+            </a>
+          </div>
+          <div>
+            <a href="/">
+              <i className="fa fa-facebook-f"></i>Facebook
+            </a>
+          </div>
+          <div>
+            <a href="/">
+              <i className="fa fa-twitter"></i>Twitter
+            </a>
+          </div>
+          <div>
+            <a href="/">
+              <i className="fa fa-tumblr"></i>Tumblr
+            </a>
+          </div>
+          <div>
+            <a href="/">
+              <i className="fa fa-pinterest"></i>Pinterest
+            </a>
+          </div>
         </div>
       </div>
-      <div className="footer-policies"></div>
-      <div className="footer-copyright"></div>
+      <hr />
+      <div className="footer-policies">
+        <h1>Redbubble</h1>
+        <div>
+          <a href="/">User Agreement</a>
+          <a href="/">Privacy Policy</a>
+          <a href="/">Redbubble uses cookies: Cookie Policy</a>
+        </div>
+      </div>
+      <hr />
+      <div className="footer-copyright">
+        <ul>
+          <li>
+            <img
+              src="https://www.redbubble.com/explore/client/2029097457bb7405bd20a4ebb77951a6.svg"
+              alt="Visa"
+            />
+          </li>
+          <li>
+            <img
+              src="https://www.redbubble.com/explore/client/457cb7ab34309bd29d7811ac56925b01.svg"
+              alt="Mastercard"
+            />
+          </li>
+          <li>
+            <img
+              src="https://www.redbubble.com/explore/client/797e58c253acbb057af56059c4024c6f.svg"
+              alt="American Express"
+            />
+          </li>
+          <li>
+            <img
+              src="https://www.redbubble.com/explore/client/5cc90de9009f853e313e431fc8d0843b.svg"
+              alt="PayPal"
+            />
+          </li>
+          <li>
+            <img
+              src="https://www.redbubble.com/explore/client/c1b9089fa25f6706893e8354fa3a2eed.svg"
+              alt="Apple Pay"
+            />
+          </li>
+          <li>
+            <img
+              src="https://www.redbubble.com/explore/client/ce4e7c766f94c0c073df1b4f8268e00d.svg"
+              alt="Amazon Pay"
+            />
+          </li>
+        </ul>
+        <div className="badge-container">
+          <a href="/">
+            <img src={appStoreBadge} alt="App Store" />
+          </a>
+          <a href="/">
+            <img src={playStoreBadge} alt="Play Store" />
+          </a>
+        </div>
+        &copy; Redbubble. All Rights Reserved
+      </div>
     </footer>
   );
 };
