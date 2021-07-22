@@ -1,6 +1,10 @@
 # Simple Redbubble Clone
 
-This is a project that I made in order to practice my skills so I decided to copy the interface of Redbubble, an e-commerce webpage where you can buy many products made community artists.
+This is a project that I made in order to practice my skills so I decided to copy the interface of Redbubble, an e-commerce webpage where you can buy many products made by community artists.
+
+## Technologies
+
+<img width="20%" src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg">
 
 ## Components
 
@@ -24,6 +28,26 @@ I made this component with grid and was my first time using it. In this componen
 
 This is a reusable component that receives as props the children elements that will be displayed in the carousel, the height of the carousel and the gaps that will be in between the columns.
 This component uses useRef and useEffect to control the movement of the carousel.
+
+```jsx
+const [carouselWidth, setCarouselWidth] = useState(0);
+const carousel = useRef(null);
+
+...
+
+// with this useEffect changes the state of the width of the carousel element
+useEffect(() => {
+  setCarouselWidth(carousel.current.offsetWidth + columnGap);
+
+  window.addEventListener("resize", () => {
+    setCarouselWidth(carousel.current.offsetWidth + columnGap);
+  });
+}, [])
+
+...
+
+<div ref={carousel} className="carousel">...</div>
+```
 
 ### **Featured Products and Products Design for user**
 
