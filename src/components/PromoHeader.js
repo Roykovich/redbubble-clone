@@ -11,7 +11,7 @@ const PromoHeader = () => {
       <div className="promo-header">
         <div>
           <h1>Promo Title</h1>
-          <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+          <h3>Promo description here</h3>
         </div>
       </div>
     </section>
