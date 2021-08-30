@@ -22,6 +22,16 @@
 }
 
 .promo-header div > h3 {
-  max-width: 550px;
   margin: 10px 0 0 0;
+}
+
+@media screen and (max-width: 800px) {
+  .promo-header div > h1 {
+    font-size: 3rem;
+  }
+
+  .promo-header div > h3 {
+    font-size: 1rem;
+    margin: 10px 5% 0;
+  }
 }
