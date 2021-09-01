@@ -88,3 +88,9 @@
 .shop-range-info div > p {
   margin: 0;
 }
+
+@media screen and (max-width: 800px) {
+  .shop-range-grid {
+    grid-template-rows: repeat(2, 400px) 1fr repeat(3, 400px);
+  }
+}
